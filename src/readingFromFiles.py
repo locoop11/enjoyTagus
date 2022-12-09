@@ -1,9 +1,21 @@
+import constants
+
 #-*- coding: utf-8 -*-
 
 # 2022-2023 Programação 1 (LTI)
 # Grupo 546
 # 65000 Óscar Adalberto 
 # 65015 Miquelina Josefa
+
+def removeHeader (filename):
+    file = open(filename, "r")
+    filecontent = file.readlines()
+    for x in range(0, constants.NUM_HEADER_LINES-1):
+        del filecontent[x]
+    file.close()
+    return filecontent
+
+
 
 
 
@@ -20,8 +32,14 @@ def readSkippersFile(fileName):
     the file fileName (with all the info pieces belonging to that skipper),
     following the order provided in the lines of the file.
     """
+    infile = removeHeader(filename)
 
+    skippersList = []
+    for skipper in inFile:
+        skipperData = skipper.rstrip().split(", ")
+        skippersList.append(skipperData)
 
+    return skippersList
 
 def readRequestsFile(fileName):
     """
