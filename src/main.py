@@ -2,8 +2,10 @@
 scheduledDrivers = {2022: {1: {1: { 12: ["Maria", "John"]}}}}
 
 # Dicionario com a lista de drivers e as suas caracteristicas
-drivers = {"John": {"stars": 4, "languages": ["English","Spanish"], "tarifa": "80", "especializaçao": "conforto", "tempo_max": "10", "horas_acomuladas": "3"} ,
-          "Maria": {"stars": 4, "languages": ["Portuguese","English"], "tarifa": "40", "especializaçao":"velocidade", "tempo_max": "30", "horas_acomuladas": "13"}
+drivers = {"John": {"stars": 4, "languages": ["English","Spanish"], "tarifa": "80", 
+                    "especializaçao": "conforto", "tempo_max": "10", "horas_acomuladas": "3"} ,
+          "Maria": {"stars": 4, "languages": ["Portuguese","English"], "tarifa": "40", 
+                    "especializaçao":"velocidade", "tempo_max": "30", "horas_acomuladas": "13"}
           }
 
 def getDriversByDate(year, month, day, hour):
@@ -36,7 +38,7 @@ print(matchingDriver)
 
 def readSkippersFromFile ( skippersFileName ): 
     # Ler o ficheiro
-    f = open("skippers.txt", "r")
+    f = open(skippersFileName, "r")
     fileLineContents = f.readlines()
     skippers = {}
 
@@ -54,6 +56,6 @@ def readSkippersFromFile ( skippersFileName ):
     return skippers
 
 
-mySkipers = readSkippersFromFile ("skippers.txt")
+mySkipers = readSkippersFromFile ("./data/skippers.txt")
 print (mySkipers)
 
