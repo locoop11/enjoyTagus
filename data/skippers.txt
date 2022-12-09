@@ -1,0 +1,10 @@
+Company:
+Tagus Sailing
+Day:
+07:11:2022
+Time:
+14:00
+Skippers:
+Chico Silva, (english; portuguese), 3*, 100, speed, 40, 14, (08:11:2022, 10:00)
+Luísinha Costa, (english; portuguese; spanish), 2*, 80, price, 65, 32, (01:12:2022, 12:00)
+Vasco Amaral, (english; french; portuguese), 1*, 40, comfort, 20, 5, (20:12:2022, 09:00)
