@@ -7,8 +7,8 @@ import constants
 # 65000 Óscar Adalberto 
 # 65015 Miquelina Josefa
 
-def removeHeader (filename):
-    file = open(filename, "r")
+def removeHeader (fileName):
+    file = open(fileName, "r")
     filecontent = file.readlines()
     for x in range(0, constants.NUM_HEADER_LINES-1):
         del filecontent[x]
@@ -32,7 +32,7 @@ def readSkippersFile(fileName):
     the file fileName (with all the info pieces belonging to that skipper),
     following the order provided in the lines of the file.
     """
-    infile = removeHeader(filename)
+    inFile = removeHeader(fileName)
 
     skippersList = []
     for skipper in inFile:
@@ -48,7 +48,7 @@ def readRequestsFile(fileName):
     
     """
 
-    inFile = removeHeader(open(fileName, "r"))       
+    inFile = removeHeader(fileName)       
 
     requestsList = [] 
     for line in inFile:
