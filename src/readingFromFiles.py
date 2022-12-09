@@ -7,11 +7,18 @@ import constants
 # 65000 Óscar Adalberto 
 # 65015 Miquelina Josefa
 
+def teste():
+    print(removeHeader("./data/skippers.txt"))
+    print(readSkippersFile("./data/skippers.txt"))
+    print(readRequestsFile("./data/skippers.txt"))
+
+
+
 def removeHeader (fileName):
     file = open(fileName, "r")
     filecontent = file.readlines()
-    for x in range(0, constants.NUM_HEADER_LINES-1):
-        del filecontent[x]
+    for x in range(constants.NUM_HEADER_LINES):
+        del filecontent[0]
     file.close()
     return filecontent
 
@@ -48,7 +55,7 @@ def readRequestsFile(fileName):
     
     """
 
-    inFile = removeHeader(fileName)       
+    inFile = removeHeader(fileName)     
 
     requestsList = [] 
     for line in inFile:
@@ -57,4 +64,4 @@ def readRequestsFile(fileName):
 
     return requestsList
 
-
+teste()
